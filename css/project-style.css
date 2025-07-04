@@ -1,0 +1,300 @@
+/* --- PROJECT PAGE SPECIFIC STYLES --- */
+.project-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-hero {
+    text-align: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.project-hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.project-tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--on-surface);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.project-meta .meta-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+.project-meta .meta-item a:hover {
+    text-decoration: underline;
+}
+
+.project-content section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.project-content h2 {
+    font-size: 2.2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: var(--on-background);
+}
+/* remove the underline from the main style */
+.project-content h2::after {
+    display: none;
+}
+
+/* --- Screenshot Gallery --- */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    border-radius: 8px; /* Optional: adds nice rounded corners to your images */
+    border: 1px solid #444; /* Optional: adds a subtle border */
+}
+
+.screenshot-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Common aspect ratio for screenshots */
+    background-color: var(--surface-color);
+    border: 2px dashed #444;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* --- Features Grid --- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Back Button --- */
+.back-link-container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.back-to-projects-btn {
+    color: var(--on-surface);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-to-projects-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .project-hero h1 { font-size: 2.5rem; }
+    .feature-grid { grid-template-columns: 1fr; }
+}
+
+/* --- STYLES FOR GROUP PROJECT SECTIONS (ADD THIS ONCE) --- */
+
+.project-context {
+    background-color: rgba(3, 218, 198, 0.05); /* A very subtle background tint */
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 2rem 0; /* Add some space above and below */
+    border-radius: 0 8px 8px 0;
+}
+.project-context p {
+    padding-left: 1rem; /* Adjust this value if you want more or less space */
+}
+.project-context h3 {
+    padding-left: 1rem; /* Adjust this value if you want more or less space */
+}
+
+.project-context h3, .my-role h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.my-role ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.my-role li {
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.my-role li::before {
+    content: '\2713'; /* Checkmark symbol */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-weight: bold;
+}
+/* --- STYLES FOR THREE-COLUMN GALLERY (ADD THIS ONCE) --- */
+
+.screenshot-grid.three-columns {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* --- STYLES FOR GALLERY CAPTIONS (ADD THIS ONCE) --- */
+
+.gallery-item {
+    background-color: var(--surface-color); /* Add the card background */
+    padding: 1rem; /* Add padding inside the card */
+    border-radius: 8px; /* Add rounded corners */
+    text-align: center;
+}
+
+/* --- ASYMMETRICAL GALLERY LAYOUT (ADD THIS ONCE) --- */
+
+.gallery-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start; /* Aligns columns to the top */
+}
+
+.main-column {
+    flex: 1.2; /* Give the main schema slightly more space */
+}
+
+.sub-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between the stacked ERD images */
+}
+
+
+/* --- Responsive adjustment for the new gallery --- */
+@media (max-width: 768px) {
+    .gallery-layout {
+        flex-direction: column; /* Stack the columns on mobile */
+    }
+}
+
+
+
+/* --- FINAL, SINGLE-COLUMN GALLERY STYLES --- */
+
+/* This is the container for the single column */
+.gallery-single-column {
+    display: flex;
+    flex-direction: column; /* Stack all items vertically */
+    gap: 3rem; /* Space between each item */
+    max-width: 800px; /* Constrain the width for a clean look */
+    margin: 3rem auto 0; /* Center the column on the page */
+}
+
+/* This styles the individual items (image + caption) */
+.gallery-item {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* This rule ensures images fit their containers perfectly */
+.gallery-single-column img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* This styles the caption text */
+.image-caption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* --- FLOATING BACK BUTTON STYLES (ADD THIS TO THE BOTTOM OF PROJECT-STYLE.CSS) --- */
+
+.floating-back-btn {
+    position: fixed; /* This is the key to making it "float" */
+    top: 30px;
+    left: 30px;
+    z-index: 1000; /* Ensure it's on top of other content */
+    
+    /* Styling the button's appearance */
+    width: 50px;
+    height: 50px;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%; /* Makes it a circle */
+    
+    /* Centering the arrow inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Text and font styling */
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    
+    /* Smooth transition effect */
+    transition: all 0.3s ease;
+}
+
+.floating-back-btn:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(3, 218, 198, 0.2);
+}
+
+
+/* --- Responsive adjustment for the floating button on mobile --- */
+@media (max-width: 768px) {
+    .floating-back-btn {
+        top: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+}

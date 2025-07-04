@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>HMS (Hotel Management System) - Project Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/project-style.css">
+    <link rel="icon" href="favicon.ico.png" type="image/x-icon">
+</head>
+<body>
+     <a href="/index.html#projects" class="floating-back-btn" title="Back to All Projects">←</a>
+    <div class="project-page-container">
+
+        <header class="project-hero">
+            <h1>HMS (Hotel Management System)</h1>
+            <p class="project-tagline">A comprehensive SQL database designed to be the backend engine for modern hotel operations.</p>
+            <div class="project-meta">
+                <div class="meta-item"><strong>Project Type:</strong> Database Architecture</div>
+                <div class="meta-item"><strong>Tech Stack:</strong> Microsoft SQL Server, SQL</div>
+                <div class="meta-item"><strong>GitHub:</strong> <a href="https://github.com/WardaSaeed183" target="_blank">View Schema/Code</a></div>
+            </div>
+        </header>
+
+        <main class="project-content">
+
+            <section class="project-overview">
+                <h2>The Goal</h2>
+                <p>Hotels require a robust and reliable system to manage a constant flow of data related to guests, rooms, and services. The objective of this project was to design and implement a normalized SQL database from the ground up, creating a scalable backend capable of handling all core hotel operations, from booking and check-in to final billing.</p>
+            </section>
+
+            <section class="project-context">
+                <h3>Project Context</h3>
+                <p>This was a semester-long database project developed in a team of two. My partner, Muaarij, and I collaborated closely on all aspects of the design and implementation, ensuring the final product was both functionally complete and well-architected for our final grades.</p>
+            </section>
+
+            <section class="my-role">
+                <h3>Our Collaborative Contributions</h3>
+                <p>We shared the workload equally, tackling key challenges together:</p>
+                <ul>
+                    <li><strong>Database Design & ERD:</strong> We jointly designed the Entity-Relationship Diagram (ERD), mapping out all tables and their relationships to accurately model hotel operations.</li>
+                    <li><strong>Schema Implementation:</strong> We both worked on writing the SQL DDL scripts to create the tables, constraints, and indexes in Microsoft SQL Server, ensuring data integrity through proper normalization (3NF).</li>
+                    <li><strong>Backend Logic (Stored Procedures):</strong> We divided the work of writing the core stored procedures. I focused on the procedures for billing and room service charges, while my partner handled room booking and availability checks.</li>
+                    <li><strong>Testing & Data Population:</strong> We collaboratively created test data and ran queries to validate that our database functioned correctly under various scenarios.</li>
+                </ul>
+            </section>
+
+            <!-- === PROJECT GALLERY (REPLACE WITH THIS SIMPLE & RELIABLE LAYOUT) === -->
+            <section class="project-gallery">
+                <h2>Showcasing the Architecture</h2>
+                <p class="gallery-intro">Since this was a backend-focused project, the gallery showcases the system's architecture and logic rather than a traditional UI.</p>
+                
+                <div class="gallery-single-column">
+                    
+                    <div class="gallery-item">
+                        <img src="/images/HMS-RelationalSchema.png" alt="The complete relational schema for the HMS database.">
+                        <p class="image-caption">The Final Relational Schema</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="/images/ERD1.png" alt="Entity-Relationship Diagram showing the Staff and Departments schema.">
+                        <p class="image-caption">ERD: Staff & Department Management</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="/images/ERD2.png" alt="Entity-Relationship Diagram showing Guest, Rooms, and Billing schema.">
+                        <p class="image-caption">ERD: Core Guest & Operations</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="/images/ERD3.png" alt="Entity-Relationship Diagram showing Guest Reviews and Reservations.">
+                        <p class="image-caption">ERD: Guest Interactions & Feedback</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="project-learnings">
+                <h2>Challenges & Lessons Learned</h2>
+                <p>Working in a pair on a complex database design was a fantastic learning experience in communication and shared ownership. The main technical challenge was ensuring our schema was perfectly normalized to prevent data anomalies while still being efficient for complex queries. This project provided a deep, practical understanding of how a well-designed database serves as the critical foundation for any successful application.</p>
+            </section>
+
+            <div class="back-link-container">
+                <a href="/index.html#projects" class="back-to-projects-btn">← Back to All Projects</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
